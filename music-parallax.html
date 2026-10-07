@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Мир музыки</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 4000px;
+      background: url('https://raw.githubusercontent.com/6yn569k7ym-maker/13pr/music-parallax/music-background.png');
+    }
+
+    #container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 400%;
+      height: 100vh;
+      display: flex;
+    }
+
+    #container .section {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 100px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #container .section .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #container .section .content .text {
+      margin-right: 50px;
+      max-width: 400px;
+      color: LightCyan;
+    }
+
+    #container .section .content .text h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 3em;
+    }
+
+    #container .section .content .text p {
+      font-size: 1.1em;
+    }
+
+    #container .section .content img {
+      width: 500px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <div class="section">
+    <div class="content">
+      <div class="text">
+        <h1><a href="https://ru.wikipedia.org/wiki/Гитара">Акустическая гитара</a></h1>
+        <p>Тёплый звук струн создаёт настроение с первого аккорда. Гитара сопровождает тихие вечера, дружеские встречи и песни у костра.<hr>Начните с простого ритма, найдите любимую мелодию и попробуйте сыграть её по-своему.<hr>Иногда нескольких аккордов достаточно, чтобы рассказать целую историю.</p>
+      </div>
+      <img src="https://raw.githubusercontent.com/6yn569k7ym-maker/13pr/music-parallax/music-guitar.png">
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="content">
+      <div class="text">
+        <h1><a href="https://ru.wikipedia.org/wiki/Саксофон">Джазовый саксофон</a></h1>
+        <p>Мягкий тембр саксофона напоминает о ночном городе и камерной сцене. В его звучании встречаются спокойствие, энергия и лёгкая грусть.<hr>Слушайте дыхание мелодии, неожиданные паузы и свободные музыкальные фразы.<hr>Импровизация превращает каждое выступление в разговор, который невозможно повторить.</p>
+      </div>
+      <img src="https://raw.githubusercontent.com/6yn569k7ym-maker/13pr/music-parallax/music-saxophone.png">
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="content">
+      <div class="text">
+        <h1><a href="https://ru.wikipedia.org/wiki/Скрипка">Голос скрипки</a></h1>
+        <p>Скрипка умеет звучать нежно и стремительно. Одно движение смычка меняет настроение мелодии и наполняет её живыми чувствами.<hr>Прислушайтесь к протяжным нотам, тонким оттенкам и диалогу инструмента с тишиной.<hr>Музыка струн приглашает остановиться и услышать то, для чего трудно подобрать слова.</p>
+      </div>
+      <img src="https://raw.githubusercontent.com/6yn569k7ym-maker/13pr/music-parallax/music-violin.png">
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="content">
+      <div class="text">
+        <h1><a href="https://ru.wikipedia.org/wiki/Синтезатор">Электронный звук</a></h1>
+        <p>Синтезатор открывает пространство для звуковых экспериментов. Мягкие переливы, глубокий бас и яркие мелодии складываются в новый музыкальный мир.<hr>Меняйте тембры, соединяйте ритмы и создавайте атмосферу собственной композиции.<hr>Здесь любопытство становится главным инструментом, а каждый звук — началом новой идеи.</p>
+      </div>
+      <img src="https://raw.githubusercontent.com/6yn569k7ym-maker/13pr/music-parallax/music-synthesizer.png">
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    var dh = $(document).height();
+    var wh = $(window).height();
+    value = (scroll / (dh - wh)) * 100;
+    $('#container').css('left', - value * 3 + '%');
+  })
+</script>
+
+</body>
+</html>
